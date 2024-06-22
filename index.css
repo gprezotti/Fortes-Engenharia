@@ -1,0 +1,78 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(197, 195, 195);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  header {
+    background-color: rgb(16, 16, 163);
+    color: white;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+
+  nav .logo {
+    margin-bottom: 10px;
+    align-self: flex-start; 
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    
+
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+  }
+
+  main {
+    text-align: center;
+    padding: 20px;
+}
+
+#logo img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.tabela {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabela thead {
+  background-color: #11538C;
+  color: white;
+}
+
+.tabela th,
+.tabela td {
+  padding: 10px;
+  text-align: left;
+}
+
+.tabela tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
