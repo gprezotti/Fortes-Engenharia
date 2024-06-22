@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornecedores</title>
+    <link rel="stylesheet" href="Fornecedores.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="../imagens/FORTES.png" alt=""> 
+      </div>
+     
+      <header>
+        <h1>Fortes Engenharia</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">Relatório  </a></li>
+            <li><a href="../cadastro/cadastro.html">Cadastro</a></li>
+            <li><a href="fornecedor.html">Fornecedor</a></li>
+            <li><a href="Colaboradores"></a></li>
+            
+          </ul>
+        </nav>
+      </header>
+      <div class="tabela-container">
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Fornecedor</th>
+              <th>CNPJ</th>
+              <th>Inscrição estadual</th>
+              <th>Cidade</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>xxxx</td>
+              <td>123456789</td>
+              <td>987456321</td>
+              <td>cariacica</td>
+            </tr>
+            
+          </tbody>
+        </table>
+       </div>
+       <div class="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Nome do fornecedor">
+
+        <label for="cnpj">CNPJ:</label>
+        <input type="number" id="cnpj" placeholder="CNPJ (Apenas números)">
+
+        <label for="inscricao">Inscrição estadual:</label>
+        <input type="number" id="inscricao" placeholder="Inscrição estadual (Apenas números)">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" placeholder="Cidade">
+
+        <button onclick="inserirNovoFornecedor()">Adicionar Novo Fornecedor</button>
+    </div>
+
+    <script>
+        function adicionarFornecedor(nome, cnpj, inscricaoEstadual, cidade) {
+            const tabela = document.querySelector('.tabela tbody');
+            const newRow = tabela.insertRow();
+            newRow.innerHTML = `
+                <td>${nome}</td>
+                <td>${cnpj}</td>
+                <td>${inscricaoEstadual}</td>
+                <td>${cidade}</td>
+            `;
+        }
+
+        function inserirNovoFornecedor() {
+            const nome = document.getElementById('nome').value;
+            const cnpj = document.getElementById('cnpj').value;
+            const inscricaoEstadual = document.getElementById('inscricao').value;
+            const cidade = document.getElementById('cidade').value;
+
+            adicionarFornecedor(nome, cnpj, inscricaoEstadual, cidade);
+        }
+    </script>
+       
+    
+        
+</body>
+</html>
